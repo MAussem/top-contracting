@@ -9,10 +9,10 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Procurement Management",
+    "Craftsmanship",
     "Project Fulfillment",
     "Negotiating Deals",
   ];
@@ -49,7 +49,7 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(500);
+      setDelta(100);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -69,22 +69,23 @@ export const Banner = () => {
                 >
                   <span className="tagline">Welcome to Top Contracting</span>
                   <h1>
-                    {`Hi!`}{" "}
+                    {/* {`Hi!`}{" "} */}
                     <span
                       className="txt-rotate"
-                      dataPeriod="1000"
-                      data-rotate='[ "Procurement Management", "Project Fulfillment", "Negotiating Deals" ]'
+                      dataPeriod="100"
+                      data-rotate='[ "Craftsmanship", "Project Fulfillment", "Negotiating Deals" ]'
                     >
                       <span className="wrap">{text}</span>
                     </span>
                   </h1>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
+                  <h4>
+                    Ready to embark on your contracting journey? Explore our
+                    website and discover the expertise, efficiency, and
+                    excellence that our contractors bring to every project. Let
+                    us be your trusted partner in transforming your ideas into
+                    reality. Get started today and experience the difference of
+                    working with the best in the industry.
+                  </h4>
                   <button onClick={() => console.log("connect")}>
                     Let’s Connect <ArrowRightCircle size={25} />
                   </button>
